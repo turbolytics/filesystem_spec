@@ -1,0 +1,12 @@
+id: fs.local
+kind: filesystem
+feature: fs.local
+answers:
+  fs.contract:
+    copy: supported
+    get: supported
+    put: supported
+    pipe: supported
+    open: supported
+    find: supported
+    rm_list: supported

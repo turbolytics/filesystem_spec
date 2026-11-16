@@ -122,3 +122,6 @@ ENV/
 
 build/
 downstream/*
+
+# Temper evidence
+/.temper/

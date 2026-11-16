@@ -1,0 +1,12 @@
+id: fs.async_wrapper
+kind: filesystem
+feature: fs.async_wrapper
+answers:
+  fs.contract:
+    copy: supported
+    get: supported
+    put: supported
+    pipe: supported
+    open: supported
+    find: supported
+    rm_list: supported

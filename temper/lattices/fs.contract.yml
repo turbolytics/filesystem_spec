@@ -1,0 +1,16 @@
+id: fs.contract
+description: >
+  What every fsspec filesystem promises. copy, get, put, pipe and open are the
+  shared abstract tests in fsspec/tests/abstract. find and rm_list come from the
+  AbstractFileSystem docstrings: find returns only files under the path, to
+  maxdepth, and rm takes a str or a list of str.
+applies_to: filesystem
+requires: [ci]
+members:
+  - key: copy
+  - key: get
+  - key: put
+  - key: pipe
+  - key: open
+  - key: find
+  - key: rm_list

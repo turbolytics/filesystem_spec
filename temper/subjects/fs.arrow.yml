@@ -1,0 +1,12 @@
+id: fs.arrow
+kind: filesystem
+feature: fs.arrow
+answers:
+  fs.contract:
+    copy: {unsupported: true, reason: "the shared setup writes into directories it never created, and pyarrow's local filesystem has no auto_mkdir", tracked_by: "shared-suite-setup"}
+    get: {unsupported: true, reason: "the shared setup writes into directories it never created, and pyarrow's local filesystem has no auto_mkdir", tracked_by: "shared-suite-setup"}
+    put: supported
+    pipe: supported
+    open: {unsupported: true, reason: "exclusive create (xb) raises ValueError", proven_by: "fsspec/implementations/tests/temper/test_contract.py::test_refuses[arrow-open]"}
+    find: supported
+    rm_list: supported

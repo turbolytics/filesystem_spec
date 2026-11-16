@@ -1,0 +1,12 @@
+id: fs.simplecache
+kind: filesystem
+feature: fs.simplecache
+answers:
+  fs.contract:
+    copy: supported
+    get: supported
+    put: supported
+    pipe: supported
+    open: supported
+    find: supported
+    rm_list: supported

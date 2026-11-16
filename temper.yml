@@ -1,0 +1,6 @@
+temper: "0.1"
+project: fsspec
+
+levels:
+  - name: ci
+    description: pytest, as CI runs it

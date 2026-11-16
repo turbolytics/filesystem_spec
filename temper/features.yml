@@ -1,0 +1,29 @@
+# The filesystems this map covers. Each one is a subject of the fs.contract lattice.
+features:
+  - id: fs.local
+    description: "LocalFileSystem."
+    requires: [ci]
+  - id: fs.memory
+    description: "MemoryFileSystem."
+    requires: [ci]
+  - id: fs.dirfs
+    description: "DirFileSystem, over memory and over local."
+    requires: [ci]
+  - id: fs.async_wrapper
+    description: "AsyncFileSystemWrapper, over local."
+    requires: [ci]
+  - id: fs.simplecache
+    description: "SimpleCacheFileSystem, over memory."
+    requires: [ci]
+  - id: fs.arrow
+    description: "ArrowFSWrapper, over pyarrow's LocalFileSystem."
+    requires: [ci]
+  - id: fs.reference
+    description: "ReferenceFileSystem."
+    requires: [ci]
+  - id: fs.zip
+    description: "ZipFileSystem, read mode."
+    requires: [ci]
+  - id: fs.tar
+    description: "TarFileSystem."
+    requires: [ci]

@@ -1,0 +1,12 @@
+id: fs.reference
+kind: filesystem
+feature: fs.reference
+answers:
+  fs.contract:
+    copy: {unsupported: true, reason: "cp_file raises NotImplementedError", proven_by: "fsspec/implementations/tests/temper/test_contract.py::test_refuses[reference-copy]"}
+    get: {unsupported: true, reason: "the shared get tests create their source files with touch, which this filesystem refuses", tracked_by: "shared-suite-setup"}
+    put: {unsupported: true, reason: "the shared get tests create their source files with touch, which this filesystem refuses", tracked_by: "shared-suite-setup"}
+    pipe: supported
+    open: {unsupported: true, reason: "open in write mode raises", proven_by: "fsspec/implementations/tests/temper/test_contract.py::test_refuses[reference-open]"}
+    find: supported
+    rm_list: supported

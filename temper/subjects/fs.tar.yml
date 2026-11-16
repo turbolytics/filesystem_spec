@@ -1,0 +1,12 @@
+id: fs.tar
+kind: filesystem
+feature: fs.tar
+answers:
+  fs.contract:
+    copy: {unsupported: true, reason: "read-only: cp_file raises", proven_by: "fsspec/implementations/tests/temper/test_contract.py::test_refuses[tar-copy]"}
+    get: {unsupported: true, reason: "the shared get tests create their source files with touch, which this filesystem refuses", tracked_by: "shared-suite-setup"}
+    put: {unsupported: true, reason: "read-only: put raises", proven_by: "fsspec/implementations/tests/temper/test_contract.py::test_refuses[tar-put]"}
+    pipe: {unsupported: true, reason: "read-only: pipe_file raises", proven_by: "fsspec/implementations/tests/temper/test_contract.py::test_refuses[tar-pipe]"}
+    open: {unsupported: true, reason: "read-only: open in write mode raises", proven_by: "fsspec/implementations/tests/temper/test_contract.py::test_refuses[tar-open]"}
+    find: supported
+    rm_list: {unsupported: true, reason: "read-only: rm raises", proven_by: "fsspec/implementations/tests/temper/test_contract.py::test_refuses[tar-rm_list]"}
